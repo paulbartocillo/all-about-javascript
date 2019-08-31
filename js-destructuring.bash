@@ -41,3 +41,10 @@ const person = { first: 'Wes', last: 'Bos' };
 const { middle: middleName = 'Super Rad' } = person;
 console.log(middleName); # 'Super Rad'
 
+#Bonus: Spread operators (...) to restructuring
+# Combining two objects without duplicating same property fields
+const person = { firstname: 'Jane', lastname: 'Doe' };
+const personWithMiddle = { firstname: 'Jane', lastname: 'Doe', middlename: 'williams' };
+const fullname = {...person, ...personWithMiddle};
+console.log(fullname); # { firstname: 'Jane', lastname: 'Doe', middlename: 'williams' }
+
